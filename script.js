@@ -295,28 +295,28 @@ document.addEventListener('keypress', e => {
     }
 });
 
-const fire_btn = document.getElementById("Fire");
-const grass_btn = document.getElementById("Grass");
-const electric_btn = document.getElementById("Electric");
-const water_btn = document.getElementById("Water");
-const ground_btn = document.getElementById("Ground");
-const rock_btn = document.getElementById("Rock");
-const fairy_btn = document.getElementById("Fairy");
-const poison_btn = document.getElementById("Poison");
-const bug_btn = document.getElementById("Bug");
-const dragon_btn = document.getElementById("Dragon");
-const psychic_btn = document.getElementById("Psychic");
-const flying_btn = document.getElementById("Flying");
-const fighting_btn = document.getElementById("Fighting");
-const normal_btn = document.getElementById("Normal");
-const ice_btn = document.getElementById("Ice");
-const ghost_btn = document.getElementById("Ghost");
-const dark_btn = document.getElementById("Dark");
-const steel_btn = document.getElementById("Steel");
+const fire_btn = document.getElementById("fire");
+const grass_btn = document.getElementById("grass");
+const electric_btn = document.getElementById("electric");
+const water_btn = document.getElementById("water");
+const ground_btn = document.getElementById("ground");
+const rock_btn = document.getElementById("rock");
+const fairy_btn = document.getElementById("fairy");
+const poison_btn = document.getElementById("poison");
+const bug_btn = document.getElementById("bug");
+const dragon_btn = document.getElementById("dragon");
+const psychic_btn = document.getElementById("psychic");
+const flying_btn = document.getElementById("flying");
+const fighting_btn = document.getElementById("fighting");
+const normal_btn = document.getElementById("normal");
+const ice_btn = document.getElementById("ice");
+const ghost_btn = document.getElementById("ghost");
+const dark_btn = document.getElementById("dark");
+const steel_btn = document.getElementById("steel");
 
-fire_btn.addEventListener('click', () =>{
+document.addEventListener('click', () => {
     let fireResults = allPokemon.filter( pokemon => {
-        r = pokemon.types[0].type.name === 'fire';
+        let r = pokemon.types[0].type.name === 'fire';
         if (pokemon.types[1] != null) {
             r += pokemon.types[1].type.name === 'fire';
         }
@@ -330,127 +330,168 @@ fire_btn.addEventListener('click', () =>{
 });
 
 
-let grassResults = allPokemon.filter( pokemon => {
-    r = pokemon.types[0].type.name === 'grass';
-    if (pokemon.types[1] != null) {
-        r += pokemon.types[1].type.name === 'grass';
-    }
-    return r;
+
+document.addEventListener('click', () => {
+    let grassResults = allPokemon.filter( pokemon => {
+        r = pokemon.types[0].type.name === 'grass';
+        if (pokemon.types[1] != null) {
+            r += pokemon.types[1].type.name === 'grass';
+        }
+        return r;
+    });
+    clearPokemon();
+    renderPokemon(grassResults);
 });
-clearPokemon();
-renderPokemon(grassResults);
 
-
-let electricResults = allPokemon.filter( pokemon => {
-    r = pokemon.types[0].type.name === 'electric';
-    if (pokemon.types[1] != null) {
-        r += pokemon.types[1].type.name === 'electric';
-    }
-    return r;
+document.addEventListener('click', () => {
+    let electricResults = allPokemon.filter( pokemon => {
+        r = pokemon.types[0].type.name === 'electric';
+        if (pokemon.types[1] != null) {
+            r += pokemon.types[1].type.name === 'electric';
+        }
+        return r;
+    });
+    clearPokemon();
+    renderPokemon(electricResults);
+    
 });
-clearPokemon();
-renderPokemon(electricResults);
 
-
-let waterResults = allPokemon.filter( pokemon => {
-    r = pokemon.types[0].type.name === 'water';
-    if (pokemon.types[1] != null) {
-        r += pokemon.types[1].type.name === 'water';
-    }
-    return r;
+document.addEventListener('click', () => {
+    let waterResults = allPokemon.filter( pokemon => {
+        r = pokemon.types[0].type.name === 'water';
+        if (pokemon.types[1] != null) {
+            r += pokemon.types[1].type.name === 'water';
+        }
+        return r;
+    });
+    clearPokemon();
+    renderPokemon(waterResults);
+    
 });
-clearPokemon();
-renderPokemon(waterResults);
 
+document.addEventListener('click', () => {
 
-let groundResults = allPokemon.filter( pokemon => {
-    r = pokemon.types[0].type.name === 'ground';
-    if (pokemon.types[1] != null) {
-        r += pokemon.types[1].type.name === 'ground';
-    }
-    return r;
+    let groundResults = allPokemon.filter( pokemon => {
+        r = pokemon.types[0].type.name === 'ground';
+        if (pokemon.types[1] != null) {
+            r += pokemon.types[1].type.name === 'ground';
+        }
+        return r;
+    });
+    clearPokemon();
+    renderPokemon(groundResults);
+    
 });
-clearPokemon();
-renderPokemon(groundResults);
 
+document.addEventListener('click', () => {
 
-let rockResults = allPokemon.filter( pokemon => {
-    r = pokemon.types[0].type.name === 'rock';
-    if (pokemon.types[1] != null) {
-        r += pokemon.types[1].type.name === 'rock';
-    }
-    return r;
+    let fairyResults = allPokemon.filter( pokemon => {
+        r = pokemon.types[0].type.name === 'fairy';
+        if (pokemon.types[1] != null) {
+            r += pokemon.types[1].type.name === 'fairy';
+        }
+        return r;
+    });
+    clearPokemon();
+    renderPokemon(fairyResults);
+    
 });
-clearPokemon();
-renderPokemon(rockResults);
 
 
-let poisonResults = allPokemon.filter( pokemon => {
-    r = pokemon.types[0].type.name === 'poison';
-    if (pokemon.types[1] != null) {
-        r += pokemon.types[1].type.name === 'poison';
-    }
-    return r;
+document.addEventListener('click', () => {
+
+    let rockResults = allPokemon.filter( pokemon => {
+        r = pokemon.types[0].type.name === 'rock';
+        if (pokemon.types[1] != null) {
+            r += pokemon.types[1].type.name === 'rock';
+        }
+        return r;
+    });
+    clearPokemon();
+    renderPokemon(rockResults);
 });
-clearPokemon();
-renderPokemon(poisonResults);
 
-
-let bugResults = allPokemon.filter( pokemon => {
-    r = pokemon.types[0].type.name === 'bug';
-    if (pokemon.types[1] != null) {
-        r += pokemon.types[1].type.name === 'bug';
-    }
-    return r;
+document.addEventListener('click', () => {
+    let poisonResults = allPokemon.filter( pokemon => {
+        r = pokemon.types[0].type.name === 'poison';
+        if (pokemon.types[1] != null) {
+            r += pokemon.types[1].type.name === 'poison';
+        }
+        return r;
+    });
+    clearPokemon();
+    renderPokemon(poisonResults);
+    
 });
-clearPokemon();
-renderPokemon(bugResults);
 
-
-let dragonResults = allPokemon.filter( pokemon => {
-    r = pokemon.types[0].type.name === 'dragon';
-    if (pokemon.types[1] != null) {
-        r += pokemon.types[1].type.name === 'dragon';
-    }
-    return r;
+document.addEventListener('click', () => {
+    let bugResults = allPokemon.filter( pokemon => {
+        r = pokemon.types[0].type.name === 'bug';
+        if (pokemon.types[1] != null) {
+            r += pokemon.types[1].type.name === 'bug';
+        }
+        return r;
+    });
+    clearPokemon();
+    renderPokemon(bugResults);
+    
 });
-clearPokemon();
 
+document.addEventListener('click', () => {
 
-
-let psychicResults = allPokemon.filter( pokemon => {
-    r = pokemon.types[0].type.name === 'psychic';
-    if (pokemon.types[1] != null) {
-        r += pokemon.types[1].type.name === 'psychic';
-    }
-    return r;
+    let dragonResults = allPokemon.filter( pokemon => {
+        r = pokemon.types[0].type.name === 'dragon';
+        if (pokemon.types[1] != null) {
+            r += pokemon.types[1].type.name === 'dragon';
+        }
+        return r;
+    });
+    clearPokemon();
+    renderPokemon(dragonResults);
+    
 });
-clearPokemon();
-renderPokemon(psychicResults);
 
-
-let flyingResults = allPokemon.filter( pokemon => {
-    r = pokemon.types[0].type.name === 'flying';
-    if (pokemon.types[1] != null) {
-        r += pokemon.types[1].type.name === 'flying';
-    }
-    return r;
+document.addEventListener('click', () => {
+    let psychicResults = allPokemon.filter( pokemon => {
+        r = pokemon.types[0].type.name === 'psychic';
+        if (pokemon.types[1] != null) {
+            r += pokemon.types[1].type.name === 'psychic';
+        }
+        return r;
+    });
+    clearPokemon();
+    renderPokemon(psychicResults);
+    
 });
-clearPokemon();
-renderPokemon(flyingResults);
 
-
-let fightingResults = allPokemon.filter( pokemon => {
-    r = pokemon.types[0].type.name === 'fighting';
-    if (pokemon.types[1] != null) {
-        r += pokemon.types[1].type.name === 'fighting';
-    }
-    return r;
+document.addEventListener('click', () => {
+    let flyingResults = allPokemon.filter( pokemon => {
+        r = pokemon.types[0].type.name === 'flying';
+        if (pokemon.types[1] != null) {
+            r += pokemon.types[1].type.name === 'flying';
+        }
+        return r;
+    });
+    clearPokemon();
+    renderPokemon(flyingResults);
+    
 });
-clearPokemon();
-renderPokemon(fightingResults);
 
+document.addEventListener('click', () => {
 
+    let fightingResults = allPokemon.filter( pokemon => {
+        r = pokemon.types[0].type.name === 'fighting';
+        if (pokemon.types[1] != null) {
+            r += pokemon.types[1].type.name === 'fighting';
+        }
+        return r;
+    });
+    clearPokemon();
+    renderPokemon(fightingResults);
+    
+});
+
+document.addEventListener('click', () => {
 let normalResults = allPokemon.filter( pokemon => {
     r = pokemon.types[0].type.name === 'normal';
     if (pokemon.types[1] != null) {
@@ -461,48 +502,60 @@ let normalResults = allPokemon.filter( pokemon => {
 clearPokemon();
 renderPokemon(normalResults);
 
-
-let iceResults = allPokemon.filter( pokemon => {
-    r = pokemon.types[0].type.name === 'ice';
-    if (pokemon.types[1] != null) {
-        r += pokemon.types[1].type.name === 'ice';
-    }
-    return r;
 });
-clearPokemon();
-renderPokemon(iceResults);
 
-
-let ghostResults = allPokemon.filter( pokemon => {
-    r = pokemon.types[0].type.name === 'ghost';
-    if (pokemon.types[1] != null) {
-        r += pokemon.types[1].type.name === 'ghost';
-    }
-    return r;
+document.addEventListener('click', () => {
+    let iceResults = allPokemon.filter( pokemon => {
+        r = pokemon.types[0].type.name === 'ice';
+        if (pokemon.types[1] != null) {
+            r += pokemon.types[1].type.name === 'ice';
+        }
+        return r;
+    });
+    clearPokemon();
+    renderPokemon(iceResults);
+    
 });
-clearPokemon();
-renderPokemon(ghostResults);
 
-
-let darkResults = allPokemon.filter( pokemon => {
-    r = pokemon.types[0].type.name === 'dark';
-    if (pokemon.types[1] != null) {
-        r += pokemon.types[1].type.name === 'dark';
-    }
-    return r;
+document.addEventListener('click', () => {
+    let ghostResults = allPokemon.filter( pokemon => {
+        r = pokemon.types[0].type.name === 'ghost';
+        if (pokemon.types[1] != null) {
+            r += pokemon.types[1].type.name === 'ghost';
+        }
+        return r;
+    });
+    clearPokemon();
+    renderPokemon(ghostResults);
+    
 });
-clearPokemon();
-renderPokemon(darkResults);
 
-
-let steelResults = allPokemon.filter( pokemon => {
-    r = pokemon.types[0].type.name === 'steel';
-    if (pokemon.types[1] != null) {
-        r += pokemon.types[1].type.name === 'steel';
-    }
-    return r;
+document.addEventListener('click', () => {
+    let darkResults = allPokemon.filter( pokemon => {
+        r = pokemon.types[0].type.name === 'dark';
+        if (pokemon.types[1] != null) {
+            r += pokemon.types[1].type.name === 'dark';
+        }
+        return r;
+    });
+    clearPokemon();
+    renderPokemon(darkResults);
+    
 });
-clearPokemon();
-renderPokemon(steelResults);
+
+document.addEventListener('click', () => {
+    let steelResults = allPokemon.filter( pokemon => {
+        r = pokemon.types[0].type.name === 'steel';
+        if (pokemon.types[1] != null) {
+            r += pokemon.types[1].type.name === 'steel';
+        }
+        return r;
+    });
+    clearPokemon();
+    renderPokemon(steelResults);
+    
+});
+
+
 
 
