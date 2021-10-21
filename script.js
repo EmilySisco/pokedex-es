@@ -295,28 +295,30 @@ document.addEventListener('keypress', e => {
     }
 });
 
-const fire_btn = document.getElementById("fire");
-const grass_btn = document.getElementById("grass");
-const electric_btn = document.getElementById("electric");
-const water_btn = document.getElementById("water");
-const ground_btn = document.getElementById("ground");
-const rock_btn = document.getElementById("rock");
-const fairy_btn = document.getElementById("fairy");
-const poison_btn = document.getElementById("poison");
-const bug_btn = document.getElementById("bug");
-const dragon_btn = document.getElementById("dragon");
-const psychic_btn = document.getElementById("psychic");
-const flying_btn = document.getElementById("flying");
-const fighting_btn = document.getElementById("fighting");
-const normal_btn = document.getElementById("normal");
-const ice_btn = document.getElementById("ice");
-const ghost_btn = document.getElementById("ghost");
-const dark_btn = document.getElementById("dark");
-const steel_btn = document.getElementById("steel");
+const fireButton = document.getElementById("fire_btn");
+const grassButton = document.getElementById("grass_btn");
+const electricButton = document.getElementById("electric_btn");
+const waterButton = document.getElementById("water_btn");
+const groundButton = document.getElementById("ground_btn");
+const rockButton = document.getElementById("rock_btn");
+const fairyButton = document.getElementById("fairy_btn");
+const poisonButton = document.getElementById("poison_btn");
+const bugButton = document.getElementById("bug_btn");
+const dragonButton = document.getElementById("dragon_btn");
+const psychicButton = document.getElementById("psychic_btn");
+const flyingButton = document.getElementById("flying_btn");
+const fightingButton = document.getElementById("fighting_btn");
+const normalButton = document.getElementById("normal_btn");
+const iceButton = document.getElementById("ice_btn");
+const ghostButton = document.getElementById("ghost_btn");
+const darkButton = document.getElementById("dark_btn");
+const steelButton = document.getElementById("steel_btn");
+const favoriteButton = document.getElementById("favorite_btn")
 
-document.addEventListener('click', () => {
+
+fireButton.addEventListener('click', () => {
     let fireResults = allPokemon.filter( pokemon => {
-        let r = pokemon.types[0].type.name === 'fire';
+        r = pokemon.types[0].type.name === 'fire';
         if (pokemon.types[1] != null) {
             r += pokemon.types[1].type.name === 'fire';
         }
@@ -329,9 +331,7 @@ document.addEventListener('click', () => {
     
 });
 
-
-
-document.addEventListener('click', () => {
+grassButton.addEventListener('click', () => {
     let grassResults = allPokemon.filter( pokemon => {
         r = pokemon.types[0].type.name === 'grass';
         if (pokemon.types[1] != null) {
@@ -343,7 +343,7 @@ document.addEventListener('click', () => {
     renderPokemon(grassResults);
 });
 
-document.addEventListener('click', () => {
+electricButton.addEventListener('click', () => {
     let electricResults = allPokemon.filter( pokemon => {
         r = pokemon.types[0].type.name === 'electric';
         if (pokemon.types[1] != null) {
@@ -356,7 +356,7 @@ document.addEventListener('click', () => {
     
 });
 
-document.addEventListener('click', () => {
+waterButton.addEventListener('click', () => {
     let waterResults = allPokemon.filter( pokemon => {
         r = pokemon.types[0].type.name === 'water';
         if (pokemon.types[1] != null) {
@@ -369,7 +369,7 @@ document.addEventListener('click', () => {
     
 });
 
-document.addEventListener('click', () => {
+groundButton.addEventListener('click', () => {
 
     let groundResults = allPokemon.filter( pokemon => {
         r = pokemon.types[0].type.name === 'ground';
@@ -383,7 +383,7 @@ document.addEventListener('click', () => {
     
 });
 
-document.addEventListener('click', () => {
+fairyButton.addEventListener('click', () => {
 
     let fairyResults = allPokemon.filter( pokemon => {
         r = pokemon.types[0].type.name === 'fairy';
@@ -398,7 +398,7 @@ document.addEventListener('click', () => {
 });
 
 
-document.addEventListener('click', () => {
+rockButton.addEventListener('click', () => {
 
     let rockResults = allPokemon.filter( pokemon => {
         r = pokemon.types[0].type.name === 'rock';
@@ -411,7 +411,7 @@ document.addEventListener('click', () => {
     renderPokemon(rockResults);
 });
 
-document.addEventListener('click', () => {
+poisonButton.addEventListener('click', () => {
     let poisonResults = allPokemon.filter( pokemon => {
         r = pokemon.types[0].type.name === 'poison';
         if (pokemon.types[1] != null) {
@@ -424,7 +424,7 @@ document.addEventListener('click', () => {
     
 });
 
-document.addEventListener('click', () => {
+bugButton.addEventListener('click', () => {
     let bugResults = allPokemon.filter( pokemon => {
         r = pokemon.types[0].type.name === 'bug';
         if (pokemon.types[1] != null) {
@@ -437,7 +437,7 @@ document.addEventListener('click', () => {
     
 });
 
-document.addEventListener('click', () => {
+dragonButton.addEventListener('click', () => {
 
     let dragonResults = allPokemon.filter( pokemon => {
         r = pokemon.types[0].type.name === 'dragon';
@@ -451,7 +451,7 @@ document.addEventListener('click', () => {
     
 });
 
-document.addEventListener('click', () => {
+psychicButton.addEventListener('click', () => {
     let psychicResults = allPokemon.filter( pokemon => {
         r = pokemon.types[0].type.name === 'psychic';
         if (pokemon.types[1] != null) {
@@ -464,7 +464,7 @@ document.addEventListener('click', () => {
     
 });
 
-document.addEventListener('click', () => {
+flyingButton.addEventListener('click', () => {
     let flyingResults = allPokemon.filter( pokemon => {
         r = pokemon.types[0].type.name === 'flying';
         if (pokemon.types[1] != null) {
@@ -477,7 +477,7 @@ document.addEventListener('click', () => {
     
 });
 
-document.addEventListener('click', () => {
+fightingButton.addEventListener('click', () => {
 
     let fightingResults = allPokemon.filter( pokemon => {
         r = pokemon.types[0].type.name === 'fighting';
@@ -491,7 +491,7 @@ document.addEventListener('click', () => {
     
 });
 
-document.addEventListener('click', () => {
+normalButton.addEventListener('click', () => {
 let normalResults = allPokemon.filter( pokemon => {
     r = pokemon.types[0].type.name === 'normal';
     if (pokemon.types[1] != null) {
@@ -504,7 +504,7 @@ renderPokemon(normalResults);
 
 });
 
-document.addEventListener('click', () => {
+iceButton.addEventListener('click', () => {
     let iceResults = allPokemon.filter( pokemon => {
         r = pokemon.types[0].type.name === 'ice';
         if (pokemon.types[1] != null) {
@@ -517,7 +517,7 @@ document.addEventListener('click', () => {
     
 });
 
-document.addEventListener('click', () => {
+ghostButton.addEventListener('click', () => {
     let ghostResults = allPokemon.filter( pokemon => {
         r = pokemon.types[0].type.name === 'ghost';
         if (pokemon.types[1] != null) {
@@ -530,7 +530,7 @@ document.addEventListener('click', () => {
     
 });
 
-document.addEventListener('click', () => {
+darkButton.addEventListener('click', () => {
     let darkResults = allPokemon.filter( pokemon => {
         r = pokemon.types[0].type.name === 'dark';
         if (pokemon.types[1] != null) {
@@ -543,7 +543,7 @@ document.addEventListener('click', () => {
     
 });
 
-document.addEventListener('click', () => {
+steelButton.addEventListener('click', () => {
     let steelResults = allPokemon.filter( pokemon => {
         r = pokemon.types[0].type.name === 'steel';
         if (pokemon.types[1] != null) {
@@ -556,6 +556,15 @@ document.addEventListener('click', () => {
     
 });
 
+favoriteButton.addEventListener('click', () => {
+    let favoriteResults = allPokemon.filter(pokemon => {
+        favorites = getElementByClassName("bi bi-star-fill");
 
 
+    return favorites;
+    });
+
+    clearPokemon();
+    renderPokemon(favoriteResults);
+});
 
