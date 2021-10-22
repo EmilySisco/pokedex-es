@@ -20,7 +20,8 @@ body {
 .navbar-brand {
   letter-spacing: 3px;
   text-decoration: none;
-  font-size: 2em;
+  font-size: 1.6em;
+  font-weight: 700;
   color: black;
 
 }
@@ -99,12 +100,28 @@ body {
   position: absolute;
   left: 7px;
   top: 7px;
+  font-size: 1.3em;
 
 }
 
 .btn-group {
-  margin: 15px;
-  max-width: 50%;
-  position: absolute;
-  left: 130px;
+ margin: 15px;
+ position: relative;
+}
+
+
+.container {
+  max-width: 90%;
+
+}
+
+
+
+h1 {
+  text-align: center;
+}
+
+
+div .row {
+  position: relative;
 }

@@ -238,13 +238,25 @@ const createPokemonCard = (pokemon) => {
 
 
 function change (iconID){
-    if(document.getElementById(iconID).className == "bi bi-star"){
+    if(document.getElementById(iconID).className == "bi bi-star") {
       document.getElementById(iconID).className = "bi bi-star-fill";
     }
     else{
       document.getElementById(iconID).className = "bi bi-star";
     }
   }
+
+
+function getFavorites() {
+
+    const f =  document.getElementsByClassName('bi bi-star-fill');
+
+
+    clearPokemon()
+
+    
+}
+
 
 
 async function loadAllPokemon() {
@@ -313,8 +325,14 @@ const iceButton = document.getElementById("ice_btn");
 const ghostButton = document.getElementById("ghost_btn");
 const darkButton = document.getElementById("dark_btn");
 const steelButton = document.getElementById("steel_btn");
-const favoriteButton = document.getElementById("favorite_btn")
+const favoriteButton = document.getElementById("favorite_btn");
+const noFilterButton = document.getElementById("nf_btn");
+const legendaryButton = document.getElementById("legendary_btn");
 
+
+favoriteButton.addEventListener('click', () => {
+    getFavorites();
+});
 
 fireButton.addEventListener('click', () => {
     let fireResults = allPokemon.filter( pokemon => {
@@ -551,20 +569,41 @@ steelButton.addEventListener('click', () => {
         }
         return r;
     });
+
     clearPokemon();
     renderPokemon(steelResults);
     
 });
 
-favoriteButton.addEventListener('click', () => {
-    let favoriteResults = allPokemon.filter(pokemon => {
-        favorites = getElementByClassName("bi bi-star-fill");
-
-
-    return favorites;
-    });
-
+noFilterButton.addEventListener('click', () => {
     clearPokemon();
-    renderPokemon(favoriteResults);
+    loadAllPokemon()
+
 });
+
+function getLegendary(pokemon) {
+
+    if(pokemon.name === "articuno"){
+        
+    }
+
+    if(pokemon.name === "zapdos") {
+        l = true;
+    }
+
+    if(pokemon.name === "moltres") {
+        l = true;
+    }
+
+    if(pokemon.name === "mewtwo") {
+        l = true;
+    }
+
+    return l;
+
+
+    
+}
+
+
 
