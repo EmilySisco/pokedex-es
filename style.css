@@ -115,8 +115,9 @@ body {
 
 }
 
-
-
+.nav-2 {
+  max-width: 90%;
+}
 h1 {
   text-align: center;
 }

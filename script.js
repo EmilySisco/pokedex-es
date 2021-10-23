@@ -1,5 +1,5 @@
 const poke_container = document.getElementById('poke-container');
-const pokemon_count = 150;
+const pokemon_count = 200;
 const colors = {
     fire: '#fd7d24',
     grass: '#9bcc50',
@@ -25,6 +25,7 @@ const main_types = Object.keys(colors);
 // ["fire", "grass", "electric"]
 
 let allPokemon = [];
+let legendaryPokeomon = [];
 
 const fetchPokemon = async () => {
     for(let i = 1; i <= pokemon_count; i++) {
@@ -151,6 +152,7 @@ const fetchPokemon = async () => {
         }
 
         p.isFavorite = false;
+
         allPokemon.push( p );
     }
 };
@@ -248,8 +250,7 @@ function change (iconID){
 
 
 function getFavorites() {
-
-    const f =  document.getElementsByClassName('bi bi-star-fill');
+const f =  document.getElementsByClassName('bi bi-star-fill');
 
 
     clearPokemon()
@@ -353,7 +354,7 @@ grassButton.addEventListener('click', () => {
     let grassResults = allPokemon.filter( pokemon => {
         r = pokemon.types[0].type.name === 'grass';
         if (pokemon.types[1] != null) {
-            r += pokemon.types[1].type.name === 'grass';
+            r = pokemon.types[1].type.name === 'grass';
         }
         return r;
     });
@@ -365,7 +366,7 @@ electricButton.addEventListener('click', () => {
     let electricResults = allPokemon.filter( pokemon => {
         r = pokemon.types[0].type.name === 'electric';
         if (pokemon.types[1] != null) {
-            r += pokemon.types[1].type.name === 'electric';
+            r = pokemon.types[1].type.name === 'electric';
         }
         return r;
     });
@@ -378,7 +379,7 @@ waterButton.addEventListener('click', () => {
     let waterResults = allPokemon.filter( pokemon => {
         r = pokemon.types[0].type.name === 'water';
         if (pokemon.types[1] != null) {
-            r += pokemon.types[1].type.name === 'water';
+            r = pokemon.types[1].type.name === 'water';
         }
         return r;
     });
@@ -392,7 +393,7 @@ groundButton.addEventListener('click', () => {
     let groundResults = allPokemon.filter( pokemon => {
         r = pokemon.types[0].type.name === 'ground';
         if (pokemon.types[1] != null) {
-            r += pokemon.types[1].type.name === 'ground';
+            r = pokemon.types[1].type.name === 'ground';
         }
         return r;
     });
@@ -406,7 +407,7 @@ fairyButton.addEventListener('click', () => {
     let fairyResults = allPokemon.filter( pokemon => {
         r = pokemon.types[0].type.name === 'fairy';
         if (pokemon.types[1] != null) {
-            r += pokemon.types[1].type.name === 'fairy';
+            r = pokemon.types[1].type.name === 'fairy';
         }
         return r;
     });
@@ -421,7 +422,7 @@ rockButton.addEventListener('click', () => {
     let rockResults = allPokemon.filter( pokemon => {
         r = pokemon.types[0].type.name === 'rock';
         if (pokemon.types[1] != null) {
-            r += pokemon.types[1].type.name === 'rock';
+            r = pokemon.types[1].type.name === 'rock';
         }
         return r;
     });
@@ -433,7 +434,7 @@ poisonButton.addEventListener('click', () => {
     let poisonResults = allPokemon.filter( pokemon => {
         r = pokemon.types[0].type.name === 'poison';
         if (pokemon.types[1] != null) {
-            r += pokemon.types[1].type.name === 'poison';
+            r = pokemon.types[1].type.name === 'poison';
         }
         return r;
     });
@@ -446,7 +447,7 @@ bugButton.addEventListener('click', () => {
     let bugResults = allPokemon.filter( pokemon => {
         r = pokemon.types[0].type.name === 'bug';
         if (pokemon.types[1] != null) {
-            r += pokemon.types[1].type.name === 'bug';
+            r = pokemon.types[1].type.name === 'bug';
         }
         return r;
     });
@@ -460,7 +461,7 @@ dragonButton.addEventListener('click', () => {
     let dragonResults = allPokemon.filter( pokemon => {
         r = pokemon.types[0].type.name === 'dragon';
         if (pokemon.types[1] != null) {
-            r += pokemon.types[1].type.name === 'dragon';
+            r = pokemon.types[1].type.name === 'dragon';
         }
         return r;
     });
@@ -473,7 +474,7 @@ psychicButton.addEventListener('click', () => {
     let psychicResults = allPokemon.filter( pokemon => {
         r = pokemon.types[0].type.name === 'psychic';
         if (pokemon.types[1] != null) {
-            r += pokemon.types[1].type.name === 'psychic';
+            r = pokemon.types[1].type.name === 'psychic';
         }
         return r;
     });
@@ -486,7 +487,7 @@ flyingButton.addEventListener('click', () => {
     let flyingResults = allPokemon.filter( pokemon => {
         r = pokemon.types[0].type.name === 'flying';
         if (pokemon.types[1] != null) {
-            r += pokemon.types[1].type.name === 'flying';
+            r = pokemon.types[1].type.name === 'flying';
         }
         return r;
     });
@@ -500,7 +501,7 @@ fightingButton.addEventListener('click', () => {
     let fightingResults = allPokemon.filter( pokemon => {
         r = pokemon.types[0].type.name === 'fighting';
         if (pokemon.types[1] != null) {
-            r += pokemon.types[1].type.name === 'fighting';
+            r = pokemon.types[1].type.name === 'fighting';
         }
         return r;
     });
@@ -513,7 +514,7 @@ normalButton.addEventListener('click', () => {
 let normalResults = allPokemon.filter( pokemon => {
     r = pokemon.types[0].type.name === 'normal';
     if (pokemon.types[1] != null) {
-        r += pokemon.types[1].type.name === 'normal';
+        r = pokemon.types[1].type.name === 'normal';
     }
     return r;
 });
@@ -526,7 +527,7 @@ iceButton.addEventListener('click', () => {
     let iceResults = allPokemon.filter( pokemon => {
         r = pokemon.types[0].type.name === 'ice';
         if (pokemon.types[1] != null) {
-            r += pokemon.types[1].type.name === 'ice';
+            r = pokemon.types[1].type.name === 'ice';
         }
         return r;
     });
@@ -539,7 +540,7 @@ ghostButton.addEventListener('click', () => {
     let ghostResults = allPokemon.filter( pokemon => {
         r = pokemon.types[0].type.name === 'ghost';
         if (pokemon.types[1] != null) {
-            r += pokemon.types[1].type.name === 'ghost';
+            r = pokemon.types[1].type.name === 'ghost';
         }
         return r;
     });
@@ -552,7 +553,7 @@ darkButton.addEventListener('click', () => {
     let darkResults = allPokemon.filter( pokemon => {
         r = pokemon.types[0].type.name === 'dark';
         if (pokemon.types[1] != null) {
-            r += pokemon.types[1].type.name === 'dark';
+            r = pokemon.types[1].type.name === 'dark';
         }
         return r;
     });
@@ -565,7 +566,7 @@ steelButton.addEventListener('click', () => {
     let steelResults = allPokemon.filter( pokemon => {
         r = pokemon.types[0].type.name === 'steel';
         if (pokemon.types[1] != null) {
-            r += pokemon.types[1].type.name === 'steel';
+            r = pokemon.types[1].type.name === 'steel';
         }
         return r;
     });
@@ -581,29 +582,24 @@ noFilterButton.addEventListener('click', () => {
 
 });
 
-function getLegendary(pokemon) {
-
-    if(pokemon.name === "articuno"){
-        
-    }
-
-    if(pokemon.name === "zapdos") {
-        l = true;
-    }
-
-    if(pokemon.name === "moltres") {
-        l = true;
-    }
-
-    if(pokemon.name === "mewtwo") {
-        l = true;
-    }
-
-    return l;
 
 
+legendaryButton.addEventListener('click', () => {
+    let legResults = allPokemon.filter((pokemon) => {
+        results = pokemon.name === "articuno";
+        results += pokemon.name === "zapdos";
+        results += pokemon.name === "moltres";
+        results += pokemon.name === "mewtwo";
+        results += pokemon.name === "raikou";
+        results += pokemon.name === "entei";
+        results += pokemon.name === "suicune";
+        results += pokemon.name === "lugia";
+        results += pokemon.name === "ho-oh";
     
-}
+    return results;
+    });
+clearPokemon();
+renderPokemon(legResults);
 
-
+} );
 
