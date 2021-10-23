@@ -578,7 +578,7 @@ steelButton.addEventListener('click', () => {
 
 noFilterButton.addEventListener('click', () => {
     clearPokemon();
-    loadAllPokemon()
+    renderPokemon(allPokemon);
 
 });
 
